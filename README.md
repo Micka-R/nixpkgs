@@ -5,9 +5,9 @@ I use home-manager, you need to add it to your packages in yout /etc/nixos/confi
 
 ## Screenshots
 New polybar theme and shell config:
-![screenshot_1](https://)
-![screenshot_2](https)
-![screenshot_3](https)
+![screenshot_1](https://imgur.com/a/RYxcI7M)
+![screenshot_2](https://imgur.com/ibCpH67)
+![screenshot_3](https://imgur.com/oR6ylEf)
 
 ## How to use
 
