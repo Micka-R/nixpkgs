@@ -1,0 +1,2 @@
+# nixpkgs
+My nix config
