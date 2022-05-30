@@ -24,6 +24,7 @@
     picom
     networkmanagerapplet
     pavucontrol
+    rofi
 
     #Terminal Programs
     alacritty

@@ -16,4 +16,6 @@ cd ~
 git clone https://github.com/Micka-R/nixpkgs ./configs/nixpkgs
 home-manager switch
 ```
+## To Do:
+-Translate my config.rasi to rofi.nix
 
