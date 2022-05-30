@@ -9,6 +9,10 @@
       ".." = "cd ..";
       c = "clear";
       vim = "nvim";
+      gen = "sudo nixos-rebuild switch";
+      pkgs = "nvim /home/pkngr/.config/nixpkgs/pkgs.nix";
+      hs = "home-manager switch";
+      gs = "cd /home/pkngr/Documents/epita/";
     };
 
     plugins = [
