@@ -86,7 +86,7 @@
           notification = false;
         }
         {
-          command = "polybar top";
+          command = "polybar top &";
           always = true;
           notification = false;
         }
@@ -95,21 +95,21 @@
           always = true;
           notification = false;
         }
-        {
-          command = "pulseaudio";
-          always = true;
-          notification = true;
-        }
-	{
-	command = "picom --experimental-backends --backend glx";
-	always = true;
-	notification = false;
-	}
+	      {
+	        command = "picom --experimental-backends --backend glx";
+	        always = true;
+	        notification = false;
+	      }
         {
           command = "nm-applet";
           always = true;
-          notification = true;
+          notification = false;
         }
+       # {
+       #   command = "pulseaudio&";
+       #   always = true;
+       #   notification = false;
+       #}
       ];
     };
   };

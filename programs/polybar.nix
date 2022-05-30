@@ -48,6 +48,7 @@ in {
     package = pkgs.polybar.override {
       i3GapsSupport = true;
       alsaSupport = true;
+      pulseSupport = true;
     };
 
     #script = "polybar -q -r top";

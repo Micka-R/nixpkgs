@@ -13,14 +13,14 @@
       };
 
       font = {
-        # normal = {
-        #   family = "JetBrains Mono";
-        #   style = "Regular";
-        # };
+        #normal = {
+        # family = "JetBrains Mono";
+        # style = "Mono";
+        #};
         size = 8.5;
       };
 
-      background_opacity = 0.90;
+      background_opacity = 0.80;
 
       shell = {
         program = "${pkgs.fish}/bin/fish";
