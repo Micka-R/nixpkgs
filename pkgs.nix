@@ -1,10 +1,10 @@
 { pkgs, ... }: {
 	home.packages = with pkgs; [
     
-    # Languages
+    #Languages
   	lua
     python38
-    dotnet-sdk_5
+    dotnet-sdk_6
     
     #Desktopapps
     discord
@@ -13,6 +13,7 @@
     libreoffice
     postman
     arandr
+
 
     #IDE
 		jetbrains.rider
@@ -25,6 +26,12 @@
     networkmanagerapplet
     pavucontrol
     rofi
+    nitrogen
+    gnomeExtensions.pop-shell
+    gnomeExtensions.dash-to-dock
+    gnome.dconf-editor
+    gnomeExtensions.pop-launcher-super-key
+
 
     #Terminal Programs
     alacritty
@@ -36,5 +43,6 @@
 
     #Games
     minecraft
+    steam
 	];
 }

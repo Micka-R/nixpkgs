@@ -105,11 +105,11 @@
           always = true;
           notification = false;
         }
-       # {
-       #   command = "pulseaudio&";
-       #   always = true;
-       #   notification = false;
-       #}
+        {
+          command = "exec --no-startup-id unity-settings-daemon";
+          always = true;
+          notification = false;
+        }
       ];
     };
   };

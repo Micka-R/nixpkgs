@@ -94,7 +94,6 @@
 			fish
 			unzip
 			docker
-			gnome.gnome-tweaks
 			home-manager
 	];
 	fonts.fonts = with pkgs; [

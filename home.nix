@@ -11,6 +11,7 @@
     ./programs/polybar.nix
     ./programs/fish/fish.nix
     ./programs/alacritty.nix
+    #./programs/rofi.nix
 	];
 	home.keyboard = {
 		layout = "us";
