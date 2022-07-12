@@ -39,6 +39,7 @@
     lolcat
     feh
     thefuck
+    pciutils
 
     #Games
     polymc

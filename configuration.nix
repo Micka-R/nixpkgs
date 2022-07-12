@@ -8,6 +8,7 @@
 	imports =
 		[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
+    ./pci-passthrough.nix
 		];
 
 # Use the systemd-boot EFI boot loader.
@@ -72,16 +73,12 @@
 # Enable touchpad support (enabled default in most desktopManager).
 	services.xserver.libinput.enable = true;
 
-# Enable libvirt for kvm setup
-  virtualisation.libvirtd.enable = true;
-  boot.kernelModules = [ "kvm-intel" ];
-
 # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.pkngr = {
 		isNormalUser = true;
 		createHome = true;
 		shell = pkgs.fish;
-		extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+		extraGroups = [ "wheel" "networkmanager" "qemu-libvirtd" "libvirtd" ]; # Enable ‘sudo’ for the user.
 	};
 	nix.allowedUsers = [ "@wheel" ];
 
