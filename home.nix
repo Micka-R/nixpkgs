@@ -4,6 +4,7 @@
 	};
 	imports = [
 		./pkgs.nix
+    ./epkgs.nix
 		./config.nix
     ./programs/i3.nix
 		./programs/nvim/default.nix

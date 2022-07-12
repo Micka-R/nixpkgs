@@ -5,7 +5,7 @@
   	lua
     python38
     dotnet-sdk_6
-    
+
     #Desktopapps
     discord
     teams
@@ -13,7 +13,7 @@
     libreoffice
     postman
     arandr
-
+    ventoy-bin
 
     #IDE
 		jetbrains.rider
@@ -26,12 +26,10 @@
     networkmanagerapplet
     pavucontrol
     rofi
-    nitrogen
     gnomeExtensions.pop-shell
-    gnomeExtensions.dash-to-dock
-    gnome.dconf-editor
     gnomeExtensions.pop-launcher-super-key
-
+    gnomeExtensions.dock-from-dash
+    gnome.gnome-tweaks
 
     #Terminal Programs
     alacritty
@@ -40,9 +38,9 @@
     neofetch
     lolcat
     feh
+    thefuck
 
     #Games
-    minecraft
-    steam
+    polymc
 	];
 }

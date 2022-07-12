@@ -17,7 +17,7 @@
         # family = "JetBrains Mono";
         # style = "Mono";
         #};
-        size = 8.5;
+        size = 14;
       };
 
       window.opacity = 0.80;

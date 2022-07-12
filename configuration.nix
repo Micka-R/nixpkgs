@@ -72,6 +72,10 @@
 # Enable touchpad support (enabled default in most desktopManager).
 	services.xserver.libinput.enable = true;
 
+# Enable libvirt for kvm setup
+  virtualisation.libvirtd.enable = true;
+  boot.kernelModules = [ "kvm-intel" ];
+
 # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.pkngr = {
 		isNormalUser = true;
