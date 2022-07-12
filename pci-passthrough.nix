@@ -23,7 +23,6 @@
   ];
   
   virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.qemu.package.enable = true;
   
   # CHANGE: add your own user here
   users.groups.libvirtd.members = [ "root" "pkngr"];
@@ -31,7 +30,7 @@
   # CHANGE: use 
   #     ls /nix/store/*OVMF*/FV/OVMF{,_VARS}.fd | tail -n2 | tr '\n' : | sed -e 's/:$//'
   # to find your nix store paths
-  virtualisation.libvirtd.qemuVerbatimConfig = ''
+  virtualisation.libvirtd.qemu.verbatimConfig = ''
     nvram = [
       "/nix/store/k42akcjj7yk8srkpilf3ddrykh7clbr9-OVMF-202202-fd/FV/OVMF.fd:/nix/store/k42akcjj7yk8srkpilf3ddrykh7clbr9-OVMF-202202-fd/FV/OVMF_VARS.fd"
     ]
