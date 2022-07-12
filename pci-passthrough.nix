@@ -23,7 +23,7 @@
   ];
   
   virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.enableKVM = true;
+  virtualisation.libvirtd.qemu.package.enable = true;
   
   # CHANGE: add your own user here
   users.groups.libvirtd.members = [ "root" "pkngr"];
