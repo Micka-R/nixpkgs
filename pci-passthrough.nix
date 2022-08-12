@@ -8,13 +8,13 @@
 {  
   # CHANGE: intel_iommu enables iommu for intel CPUs with VT-d
   # use amd_iommu if you have an AMD CPU with AMD-Vi
-  boot.kernelParams = [ "intel_iommu=on" ];
+  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
     
   # These modules are required for PCI passthrough, and must come before early modesetting stuff
-  boot.kernelModules = [ "vfio" "vfio_iommu_type1" "vfio_pci" "vfio_virqfd" ];
+  boot.kernelModules = [ "kvm-intel" "vfio_pci"];
   
   # CHANGE: Don't forget to put your own PCI IDs here
-  boot.extraModprobeConfig ="options vfio-pci ids=10de:1f11,10de:10f9";
+#  boot.extraModprobeConfig ="options vfio-pci ids=10de:1f11,10de:10f9";
   
   environment.systemPackages = with pkgs; [
     virtmanager
@@ -22,7 +22,41 @@
     OVMF
   ];
   
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    onBoot = "ignore";
+    onShutdown = "shutdown";
+    qemu = {
+	ovmf.enable = true;
+        runAsRoot = true;
+  };
+};
+
+ # Add binaries to path so that hooks can use it
+  systemd.services.libvirtd = {
+    path = let
+             env = pkgs.buildEnv {
+               name = "qemu-hook-env";
+               paths = with pkgs; [
+                 bash
+                 libvirt
+                 kmod
+                 systemd
+                 ripgrep
+                 sd
+               ];
+             };
+           in
+           [ env ];
+    preStart =
+    ''
+      chmod +x /var/lib/libvirt/hooks/qemu
+      chmod +x /var/lib/libvirt/hooks/kvm.conf
+      chmod +x /var/lib/libvirt/hooks/qemu.d/win10/prepare/begin/start.sh
+      chmod +x /var/lib/libvirt/hooks/qemu.d/win10/release/end/stop.sh
+    '';
+  };
+
   
   # CHANGE: add your own user here
   users.groups.libvirtd.members = [ "root" "pkngr"];

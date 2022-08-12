@@ -14,6 +14,7 @@
     postman
     arandr
     ventoy-bin
+    vagrant
 
     #IDE
 		jetbrains.rider
@@ -30,6 +31,7 @@
     gnomeExtensions.pop-launcher-super-key
     gnomeExtensions.dock-from-dash
     gnome.gnome-tweaks
+    gnomeExtensions.vitals
 
     #Terminal Programs
     alacritty
@@ -40,6 +42,7 @@
     feh
     thefuck
     pciutils
+    tree
 
     #Games
     polymc
